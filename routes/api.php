@@ -21,6 +21,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::group(['middleware' => ['api','checkpassword'] ],function(){
+    Route::post('/login', 'App\Http\Controllers\AuthController@login');
+    Route::get('/getCountries', 'App\Http\Controllers\GovernorateController@getCountries');
+});
+
+Route::group(['middleware' => ['api','checkpassword','checkusertoken:api',] ],function(){
     Route::get('getlist' , 'App\Http\Controllers\BookingController@index'); 
     Route::post('ticketbooking' , 'App\Http\Controllers\BookingController@TicketBooking'); 
 });

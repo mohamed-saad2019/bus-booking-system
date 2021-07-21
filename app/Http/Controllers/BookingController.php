@@ -15,6 +15,10 @@ use Validator ;
 class BookingController extends Controller
 {
     use GeneralTrait ;
+    public function __construct()
+    {
+        auth()->setDefaultDriver('api');
+    }
     public function index(Request $request)
     {
         $rules = [
@@ -67,7 +71,8 @@ class BookingController extends Controller
             foreach($request->chairs as $chair)
             {
                 $_chair = Chair::findOrFail($chair);
-                if($_chair->status == 0)
+
+                if($_chair->status == 'available')
                 {
                     $_chair->status = 1 ;
                     $_chair->save();

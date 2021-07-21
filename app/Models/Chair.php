@@ -15,7 +15,7 @@ class Chair extends Model
     public function getStatusAttribute($val)
     {
         if($val == 0 ){
-            return "Available";
+            return "available";
         }
     }
 }
