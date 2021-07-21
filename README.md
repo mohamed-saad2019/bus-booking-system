@@ -9,7 +9,7 @@ for Run the Project
         : write php artisan key:generate 
         :       php artisan config:cache
         :       php artisan migrate --seed
-        :       php artisan serv
+        :       php artisan serv 
         
 url api : http://127.0.0.1:8000/api
 
