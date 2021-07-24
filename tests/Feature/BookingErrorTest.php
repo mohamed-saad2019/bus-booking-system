@@ -18,7 +18,7 @@ class BookingErrorTest extends TestCase
         $data = [];
 
         $token = auth()->guard('api')->login(User::whereEmail("mohamed@gmail.com")->first());
-        $headers = [];
+        $headers = [] ;
         $headers['Authorization'] = 'Bearer ' . $token;
         $headers['apiSecret'] = 'd54fdk!d5&m';
         return $this->json(
