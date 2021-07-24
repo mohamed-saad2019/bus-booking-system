@@ -29,3 +29,4 @@ in postman :
         4- If you want to see a list of empty places, you can use this request (getlist).
         5- To book a ticket, you can use this request (ticketbooking), taking into account that the user can book more than one chair in one request
         6- Finally, you can see the examples in collection , and if you face any difficulty, do not hesitate to contact me.
+

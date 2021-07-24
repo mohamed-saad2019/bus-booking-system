@@ -26,7 +26,7 @@ Route::group(['middleware' => ['api','checkpassword'] ],function(){
 });
 
 Route::group(['middleware' => ['api','checkpassword','checkusertoken:api',] ],function(){
-    Route::get('getlist' , 'App\Http\Controllers\BookingController@index'); 
+    Route::get('getlist' , 'App\Http\Controllers\BookingController@index')->name('getlist'); 
     Route::post('ticketbooking' , 'App\Http\Controllers\BookingController@TicketBooking'); 
 });
 
